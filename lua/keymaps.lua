@@ -15,6 +15,9 @@ keymap('c', 'jk', '<esc>')
 keymap('s', 'jk', '<esc>')
 keymap('o', 'jk', '<esc>')
 
+-- CLEAR SEARCH
+keymap('n', '<leader>jk', ':nohl<cr>')
+
 -- SAVE, DISCARD, QUIT
 keymap('n', '<leader>w', ':w!<cr>')
 keymap('n', '<leader>wq', ':wq!<cr>')
