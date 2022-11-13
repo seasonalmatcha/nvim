@@ -74,5 +74,7 @@ keymap('i', '<A-BS>', '<Del>')
 keymap('n', 'cq', 'cb')
 
 -- SPLIT WINDOW
-keymap('n', 'ss', ':split<cr>')
-keymap('n', 'sv', ':vsplit<cr>')
+keymap('n', 'sv', ':split<cr>')
+keymap('n', 'ss', ':vsplit<cr>')
+keymap('n', 'sd', ':close<cr>')
+keymap('n', 'sj', '<C-w>=')
