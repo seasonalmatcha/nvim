@@ -6,8 +6,8 @@ local keymap = function(mode, key, command)
   vim.api.nvim_set_keymap(mode, key, command, opts)
 end
 
-keymap('n', '<leader>j', ':Gitsigns next_hunk<Cr>')
-keymap('n', '<leader>k', ':Gitsigns prev_hunk<Cr>')
+keymap('n', 'gj', ':Gitsigns next_hunk<Cr>')
+keymap('n', 'gk', ':Gitsigns prev_hunk<Cr>')
 
 gs.setup {
   signs = {
