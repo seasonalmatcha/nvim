@@ -65,7 +65,7 @@ keymap('n', '<A-S-f>', ':lua vim.lsp.buf.format()')
 
 -- DUPLICATE LINES
 keymap('i', '<C-d>', '<Esc><S-v>ypi')
-keymap('n', '<C-d>', '<S-v>ypi')
+keymap('n', '<C-d>', '<S-v>yp')
 keymap('v', '<C-d>', 'y<S-p>')
 
 keymap('n', 'dq', 'db')
