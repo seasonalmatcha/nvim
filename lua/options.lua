@@ -9,6 +9,7 @@ local options = {
   pumheight = 10,
   showmode = false,
   showtabline = 2,
+  ignorecase = true,
   smartcase = true,
   smartindent = true,
   splitbelow = true,
