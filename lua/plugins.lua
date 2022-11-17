@@ -42,36 +42,36 @@ packer.init {
 }
 
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim"
-  use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
-  use "windwp/nvim-autopairs"
-  use "windwp/nvim-ts-autotag"
-  use "joshdick/onedark.vim"
-  use "L3MON4D3/LuaSnip"
-  use "neovim/nvim-lspconfig"
-  use "onsails/lspkind-nvim"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/cmp-nvim-lua"
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
-  use "saadparwaiz1/cmp_luasnip"
-  use "nvim-telescope/telescope.nvim"
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use "numToStr/Comment.nvim"
-  use "JoosepAlviste/nvim-ts-context-commentstring"
-  use "lewis6991/gitsigns.nvim"
-  use "kyazdani42/nvim-web-devicons"
-  use { "akinsho/bufferline.nvim", tag = "v3.*" }
-  use "nvim-lualine/lualine.nvim"
-  use "kyazdani42/nvim-tree.lua"
-  use "glepnir/lspsaga.nvim"
-  use "jose-elias-alvarez/null-ls.nvim"
-  use "lukas-reineke/lsp-format.nvim"
+  use 'wbthomason/packer.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'joshdick/onedark.vim'
+  use 'L3MON4D3/LuaSnip'
+  use 'neovim/nvim-lspconfig'
+  use 'onsails/lspkind-nvim'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'nvim-telescope/telescope.nvim'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'lewis6991/gitsigns.nvim'
+  use 'kyazdani42/nvim-web-devicons'
+  use { 'akinsho/bufferline.nvim', tag = 'v3.*' }
+  use 'nvim-lualine/lualine.nvim'
+  use 'kyazdani42/nvim-tree.lua'
+  use 'glepnir/lspsaga.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'lukas-reineke/lsp-format.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
