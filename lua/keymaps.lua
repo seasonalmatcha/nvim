@@ -60,8 +60,8 @@ keymap('i', '<C-S-l>', '<Esc>ea')
 keymap('i', '<C-S-h>', '<Esc>bi')
 
 -- FORMAT DOCUMENT
-keymap('i', '<A-S-f>', '<Esc>:lua vim.lsp.buf.format()')
-keymap('n', '<A-S-f>', ':lua vim.lsp.buf.format()')
+keymap('i', '<A-S-f>', '<Esc>:lua vim.lsp.buf.format()<Cr>i')
+keymap('n', '<A-S-f>', ':lua vim.lsp.buf.format()<Cr>')
 
 -- DUPLICATE LINES
 keymap('i', '<C-d>', '<Esc><S-v>ypi')
