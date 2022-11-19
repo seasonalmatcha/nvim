@@ -73,6 +73,7 @@ return packer.startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'lukas-reineke/lsp-format.nvim'
   use 'tpope/vim-surround'
+  use 'andweeb/presence.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
