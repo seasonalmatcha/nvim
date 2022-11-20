@@ -4,6 +4,9 @@ if not ok then error(mason) return end
 local ok2, mason_lspconfig = pcall(require, 'mason-lspconfig')
 if not ok2 then error(mason_lspconfig) return end
 
+local ok3, mason_nl = pcall(require, 'mason-null-ls')
+if not ok3 then error(mason_nl) return end
+
 mason.setup{
  ui = {
     icons = {
@@ -28,3 +31,11 @@ mason_lspconfig.setup{
   },
   automatic_installation = true,
 }
+
+mason_nl.setup({
+  ensure_installed = {
+    'eslint_d',
+    'prettierd',
+    'stylua',
+  },
+})
