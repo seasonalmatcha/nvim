@@ -9,7 +9,6 @@ local diagnostics = null_ls.builtins.diagnostics
 local sources = {
   diagnostics.eslint_d,
   formatting.prettierd,
-  formatting.stylua,
 }
 
 local lsp_formatting = function(bufnr)
