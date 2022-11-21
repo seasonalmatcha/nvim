@@ -76,6 +76,7 @@ return packer.startup(function(use)
   use 'andweeb/presence.nvim'
   use 'jayp0521/mason-null-ls.nvim'
   use 'mg979/vim-visual-multi'
+  use 'Yggdroot/indentLine'
 
   if packer_bootstrap then
     require('packer').sync()
