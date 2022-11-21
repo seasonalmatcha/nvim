@@ -56,8 +56,8 @@ keymap('i', '<C-A-h>', '<Home><Esc>wI')
 keymap('i', '<C-A-j>', '<Esc>o')
 keymap('i', '<C-A-k>', '<Esc><S-o>')
 keymap('i', '<C-A-l>', '<End>')
-keymap('i', '<C-S-l>', '<Esc>ea')
-keymap('i', '<C-S-h>', '<Esc>bi')
+keymap('i', '<C-L>', '<Esc>ea')
+keymap('i', '<C-H>', '<Esc>bi')
 
 -- FORMAT DOCUMENT
 keymap('i', '<A-S-f>', '<Esc>:lua vim.lsp.buf.format()<Cr>i')
