@@ -2,7 +2,9 @@ require 'options'
 require 'keymaps'
 require 'plugins'
 
-if vim.fn.has("wsl") then
+local is_wsl = vim.fn.has 'wsl' ~= 0
+
+if is_wsl then
   vim.cmd [[
    let g:clipboard = {
       \   'name': 'wslclipboard',
