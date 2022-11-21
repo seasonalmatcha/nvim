@@ -75,6 +75,7 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'andweeb/presence.nvim'
   use 'jayp0521/mason-null-ls.nvim'
+  use 'mg979/vim-visual-multi'
 
   if packer_bootstrap then
     require('packer').sync()
