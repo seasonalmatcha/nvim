@@ -32,7 +32,7 @@ keymap('i', '<A-k>', '<esc>:m .-2<cr>==gi')
 keymap('n', '<A-j>', ':m .+<cr>==')
 keymap('n', '<A-k>', ':m .-2<cr>==')
 keymap('v', '<A-j>', ":m '>+1<cr>gv=gv")
-keymap('v', '<A-l>', ":m '<-2<cr>gv=gv")
+keymap('v', '<A-k>', ":m '<-2<cr>gv=gv")
 
 -- INDENT USING TAB / S-TAB
 keymap('n', '<Tab>', '>>')
