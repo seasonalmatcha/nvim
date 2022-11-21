@@ -78,3 +78,6 @@ keymap('n', 'sv', ':split<cr>')
 keymap('n', 'ss', ':vsplit<cr>')
 keymap('n', 'sd', ':close<cr>')
 keymap('n', 'sj', '<C-w>=')
+
+-- MAP Alt+v TO Ctrl+v FOR VISUAL BLOCK
+keymap('n', '<A-v>', '<C-v>')
