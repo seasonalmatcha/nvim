@@ -67,7 +67,7 @@ keymap('n', '<C-d>', '<S-v>yp')
 keymap('v', '<C-d>', 'y<S-p>')
 
 keymap('n', 'dq', 'db')
-keymap('i', '<C-BS>', '<Esc>dbi')
+keymap('i', '<leader><bs><bs>', '<C-W>')
 keymap('i', '<A-BS>', '<Del>')
 keymap('n', 'cq', 'cb')
 
