@@ -79,3 +79,6 @@ keymap('n', 'sj', '<C-w>=')
 
 -- MAP Alt+v TO Ctrl+v FOR VISUAL BLOCK
 keymap('n', '<A-v>', '<C-v>')
+
+-- REDO
+keymap('n', '<S-u>', '<C-r>')
