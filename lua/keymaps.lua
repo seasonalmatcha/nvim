@@ -44,8 +44,8 @@ keymap('i', '<S-Tab>', '<C-d>')
 
 -- BUFFERS
 keymap('n', '<leader>d', ':bdelete<cr>')
-keymap('n', '<leader>j', ':bnext<cr>')
-keymap('n', '<leader>k', ':bprev<cr>')
+keymap('n', '<leader>k', ':bnext<cr>')
+keymap('n', '<leader>j', ':bprev<cr>')
 
 -- MOTION IN INSERT MODE
 keymap('i', '<C-h>', '<Left>')
