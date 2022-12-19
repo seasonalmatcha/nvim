@@ -3,6 +3,8 @@ local keymap = function(mode, key, command)
   vim.api.nvim_set_keymap(mode, key, command, opts)
 end
 
+local has = vim.fn.has
+
 keymap('', '<space>', '<Nop>')
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -34,6 +36,15 @@ keymap('n', '<A-k>', ':m .-2<cr>==')
 keymap('v', '<A-j>', ":m '>+1<cr>gv=gv")
 keymap('v', '<A-k>', ":m '<-2<cr>gv=gv")
 
+if has('mac') then
+  keymap('i', '∆', '<esc>:m .+<cr>==gi')
+  keymap('i', '˚', '<esc>:m .-2<cr>==gi')
+  keymap('n', '∆', ':m .+<cr>==')
+  keymap('n', '˚', ':m .-2<cr>==')
+  keymap('v', '∆', ":m '>+1<cr>gv=gv")
+  keymap('v', '˚', ":m '<-2<cr>gv=gv")
+end
+
 -- INDENT USING TAB / S-TAB
 keymap('n', '<Tab>', '>>')
 keymap('n', '<S-Tab>', '<<')
@@ -57,9 +68,19 @@ keymap('i', '<A-O>', '<C-O>O')
 keymap('i', '<C-A-l>', '<Esc>ea')
 keymap('i', '<C-A-h>', '<Esc>bi')
 
+if has('mac') then
+  keymap('i', 'ø', '<C-O>o')
+  keymap('i', 'Ø', '<C-O>O')
+end
+
 -- FORMAT DOCUMENT
 keymap('i', '<A-S-f>', '<Esc>:lua vim.lsp.buf.format()<Cr>i')
 keymap('n', '<A-S-f>', ':lua vim.lsp.buf.format()<Cr>')
+
+if has('mac') then
+  keymap('i', 'Ï', '<Esc>:lua vim.lsp.buf.format()<Cr>i')
+  keymap('n', 'Ï', ':lua vim.lsp.buf.format()<Cr>')
+end
 
 -- DUPLICATE LINES
 keymap('i', '<C-d>', '<Esc><S-v>ypi')
@@ -79,6 +100,10 @@ keymap('n', 'sj', '<C-w>=')
 
 -- MAP Alt+v TO Ctrl+v FOR VISUAL BLOCK
 keymap('n', '<A-v>', '<C-v>')
+
+if has('mac') then
+  keymap('n', '√', '<C-v>')
+end
 
 -- REDO
 keymap('n', '<S-u>', '<C-r>')
