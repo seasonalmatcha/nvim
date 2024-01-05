@@ -40,7 +40,7 @@ return {
         integrations = {
           cmp = true,
           gitsigns = true,
-          nvimtree = true,
+          nvimtree = false,
           treesitter = true,
           harpoon = true,
           indent_blankline = {
