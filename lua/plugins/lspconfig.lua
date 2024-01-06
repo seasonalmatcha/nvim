@@ -35,7 +35,6 @@ return {
       local servers = {
         "tsserver",
         "prismals",
-        "eslint",
         "dockerls",
         "tailwindcss",
         "emmet_language_server",
