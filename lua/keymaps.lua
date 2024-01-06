@@ -74,3 +74,6 @@ map("i", "<c-h>", "<left>")
 map("i", "<c-j>", "<down>")
 map("i", "<c-k>", "<up>")
 map("i", "<c-l>", "<right>")
+
+map("n", "<s-x>", "<c-v>")
+map({ "i", "n" }, "<c-f>", ":%s/", { silent = false })
