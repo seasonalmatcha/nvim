@@ -17,22 +17,20 @@ local ensure_installed = {
 
 return {
   {
-    "williamboman/mason.nvim",
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
     config = function()
+      local map = require("utils").map
       require("mason").setup()
+      local lspconfig = require("lspconfig")
 
       vim.api.nvim_create_user_command("MasonInstallAll", function()
         vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
       end, {})
 
       vim.g.mason_binaries_list = ensure_installed
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      local map = require("utils").map
-      local lspconfig = require("lspconfig")
 
       local servers = {
         "tsserver",
@@ -43,13 +41,53 @@ return {
         "emmet_language_server",
       }
 
+      local on_attach = function(_, bufnr)
+        local function buf_set_option(...)
+          vim.api.nvim_buf_set_option(bufnr, ...)
+        end
+
+        buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
+        local opts = { buffer = bufnr, noremap = true, silent = true }
+
+        map("n", "gD", function()
+          vim.lsp.buf.declaration()
+        end, opts)
+        map("n", "gd", function()
+          vim.lsp.buf.definition()
+        end, opts)
+        map("n", "gi", function()
+          vim.lsp.buf.implementation()
+        end, opts)
+        map("n", "gr", function()
+          vim.lsp.buf.references()
+        end, opts)
+        map("n", "K", function()
+          vim.lsp.buf.hover()
+        end, opts)
+        map("n", "<leader>ls", function()
+          vim.lsp.buf.signature_help()
+        end, opts)
+        map("n", "<leader>D", function()
+          vim.lsp.buf.type_definition()
+        end, opts)
+        map("n", "<leader>ca", function()
+          vim.lsp.buf.code_action()
+        end, opts)
+        map("n", "<leader>ra", function()
+          vim.lsp.buf.rename()
+        end, opts)
+        map("n", "[d", function()
+          vim.diagnostic.goto_prev({ float = { border = "rounded" } })
+        end, opts)
+        map("n", "]d", function()
+          vim.diagnostic.goto_next({ float = { border = "rounded" } })
+        end, opts)
+        map("n", "<leader>lr", "<cmd> LspRestart <cr>")
+      end
+
       for _, server in ipairs(servers) do
         lspconfig[server].setup({
-          init_options = {
-            preferences = {
-              disableSuggestions = true,
-            },
-          },
+          on_attach = on_attach,
         })
       end
 
@@ -72,53 +110,12 @@ return {
         },
       })
 
-      local border = "rounded"
-      require("lspconfig.ui.windows").default_options = {
-        border = border,
+      local win_style = {
+        border = "rounded",
       }
 
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = border,
-      })
-
-      vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = border,
-      })
-
-      map("n", "gD", function()
-        vim.lsp.buf.declaration()
-      end)
-      map("n", "gd", function()
-        vim.lsp.buf.definition()
-      end)
-      map("n", "gi", function()
-        vim.lsp.buf.implementation()
-      end)
-      map("n", "gr", function()
-        vim.lsp.buf.references()
-      end)
-      map("n", "K", function()
-        vim.lsp.buf.hover()
-      end)
-      map("n", "<leader>ls", function()
-        vim.lsp.buf.signature_help()
-      end)
-      map("n", "<leader>D", function()
-        vim.lsp.buf.type_definition()
-      end)
-      map("n", "<leader>ca", function()
-        vim.lsp.buf.code_action()
-      end)
-      map("n", "[d", function()
-        vim.diagnostic.goto_prev({ float = { border = "rounded" } })
-      end)
-      map("n", "]d", function()
-        vim.diagnostic.goto_next({ float = { border = "rounded" } })
-      end)
-      map("n", "<leader>ra", function()
-        vim.lsp.buf.rename()
-      end)
-      map("n", "<leader>lr", "<cmd> LspRestart <cr>")
+      require("lspconfig.ui.windows").default_options = win_style
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, win_style)
     end,
   },
 }
