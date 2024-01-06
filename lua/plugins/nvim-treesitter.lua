@@ -25,6 +25,7 @@ return {
           "markdown",
           "rust",
           "toml",
+          "vimdoc",
           "xml",
           "yaml",
         },
