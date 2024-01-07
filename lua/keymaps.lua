@@ -44,9 +44,9 @@ map("v", "Ô", "yp")
 map("v", "", "yP")
 
 -- Splits
-map("n", "ss", ":vsplit<cr>")
-map("n", "sh", ":split<cr>")
-map("n", "sd", ":close<cr>")
+map("n", "<leader>ss", ":vsplit<cr>")
+map("n", "<leader>sh", ":split<cr>")
+map("n", "<leader>sd", ":close<cr>")
 
 map("n", "vv", "ve")
 map("n", "dq", "db")
