@@ -14,7 +14,7 @@ return {
         javascriptreact = { { "prettierd", "prettier" } },
         json = { { "prettierd", "prettier" } },
         markdown = { { "prettierd", "prettier" } },
-        go = { "gofumpt", "goimports_reviser", "golines" },
+        go = { "gofumpt", "goimports", "golines" },
         prisma = { "prismaFmt" },
         ["_"] = { "trim_whitespace" },
       },

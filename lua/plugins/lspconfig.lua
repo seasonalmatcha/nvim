@@ -8,7 +8,7 @@ local ensure_installed = {
   "sqlls",
   "typescript-language-server",
   "golines",
-  "goimports_reviser",
+  "goimports",
   "golines",
   "rust-analyzer",
   "emmet-language-server",
@@ -38,6 +38,7 @@ return {
         "dockerls",
         "tailwindcss",
         "emmet_language_server",
+        "gopls",
       }
 
       local on_attach = function(_, bufnr)
