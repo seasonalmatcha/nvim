@@ -63,5 +63,6 @@ return {
     map("n", ";b", "<cmd> Telescope buffers <cr>")
     map("n", ";l", "<cmd> Telescope live_grep <cr>")
     map("n", ";j", "<cmd> Telescope jumplist <cr>")
+    map("n", ";h", "<cmd> Telescope help_tags <cr>")
   end,
 }
