@@ -9,7 +9,6 @@ map({ "n" }, "<leader>jk", "<cmd> noh <cr>")
 map({ "n" }, "<esc>", "<cmd> noh <cr>")
 
 -- Buffers
-map("n", "<leader>d", ":q<cr>")
 map("n", "<leader>q", ":q<cr>")
 map("n", "<leader>w", ":w<cr>")
 map("n", "<leader>qwe", ":q!<cr>")
