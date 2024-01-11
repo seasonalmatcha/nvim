@@ -23,8 +23,8 @@ return {
     })
 
     map("n", "<leader>t", "<cmd> :%bdel <cr>")
-    map("n", "<tab>", "<cmd> BufferLineCycleNext <cr>")
-    map("n", "<s-tab>", "<cmd> BufferLineCyclePrev <cr>")
+    map("n", "<leader><tab>", "<cmd> BufferLineCycleNext <cr>")
+    map("n", "<leader><s-tab>", "<cmd> BufferLineCyclePrev <cr>")
 
     for i = 1, 9, 1 do
       map("n", string.format("<a-%s>", i), string.format("<cmd> BufferLineGoToBuffer %s <cr>", i))

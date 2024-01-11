@@ -57,6 +57,8 @@ map("i", "<a-bs>", "<del>")
 -- Indent
 map("i", "<tab>", "<C-t>")
 map("i", "<s-tab>", "<C-d>")
+map("n", "<tab>", ">>")
+map("n", "<s-tab>", "<<")
 map("v", "<tab>", ">gv")
 map("v", "<s-tab>", "<gv")
 
