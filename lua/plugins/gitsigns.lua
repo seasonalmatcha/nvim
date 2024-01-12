@@ -37,6 +37,12 @@ return {
         map("n", "gk", function()
           gs.prev_hunk()
         end)
+        map("n", "<leader>gr", function()
+          gs.reset_hunk()
+        end)
+        map("n", "<leader>gd", function()
+          gs.diffthis()
+        end)
       end,
     })
   end,
