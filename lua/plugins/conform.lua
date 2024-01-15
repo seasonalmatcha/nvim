@@ -2,7 +2,9 @@ return {
   "stevearc/conform.nvim",
   event = "VeryLazy",
   config = function()
-    local map = require("utils").map
+    local utils = require("utils")
+    local map = utils.map
+    local aucmd = utils.aucmd
     local conform = require("conform")
 
     conform.setup({
@@ -31,7 +33,7 @@ return {
       },
     })
 
-    vim.api.nvim_create_autocmd("BufWritePre", {
+    aucmd("BufWritePre", {
       pattern = "*",
       callback = function(args)
         require("conform").format({ bufnr = args.buf })
