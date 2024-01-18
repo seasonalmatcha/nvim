@@ -40,7 +40,6 @@ return {
         integrations = {
           cmp = true,
           gitsigns = true,
-          nvimtree = false,
           treesitter = true,
           harpoon = true,
           indent_blankline = {
@@ -49,6 +48,7 @@ return {
             colored_indent_levels = false,
           },
           neotest = true,
+          neotree = true,
         },
       })
 

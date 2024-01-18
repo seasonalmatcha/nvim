@@ -1,5 +1,6 @@
 return {
   "nvim-tree/nvim-tree.lua",
+  enabled = false,
   config = function()
     local map = require("utils").map
     local nvimtree = require("nvim-tree")

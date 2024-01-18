@@ -12,7 +12,7 @@ map({ "n" }, "<esc>", "<cmd> noh <cr>")
 map("n", "<leader>q", ":q<cr>")
 map("n", "<leader>w", ":w<cr>")
 map("n", "<leader>qwe", ":q!<cr>")
-map("n", "<leader>d", ":bdelete<cr>")
+map("n", "<leader>d", ":bdelete<cr> :bnext<cr>")
 
 -- Move line/block
 map("i", "<a-j>", "<esc>:m .+<cr>==gi")
