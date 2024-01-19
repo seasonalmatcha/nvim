@@ -10,7 +10,7 @@ return {
         numbers = "ordinal",
         diagnostics = "nvim_lsp",
         diagnostics_update_in_insert = true,
-        always_show_bufferline = false,
+        always_show_bufferline = true,
         offsets = {
           {
             filetype = "neo-tree",
@@ -22,9 +22,9 @@ return {
       },
     })
 
-    map("n", "<leader>t", "<cmd> :%bdel <cr>")
-    map("n", "<leader><tab>", "<cmd> BufferLineCycleNext <cr>")
-    map("n", "<leader><s-tab>", "<cmd> BufferLineCyclePrev <cr>")
+    map("n", "<leader>tt", "<cmd> :%bdel <cr>")
+    map("n", "<tab>", "<cmd> BufferLineCycleNext <cr>")
+    map("n", "<s-tab>", "<cmd> BufferLineCyclePrev <cr>")
 
     for i = 1, 9, 1 do
       map("n", string.format("<a-%s>", i), string.format("<cmd> BufferLineGoToBuffer %s <cr>", i))
