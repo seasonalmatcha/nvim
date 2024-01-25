@@ -118,6 +118,7 @@ return {
           }),
         },
         sources = {
+          { name = "cody" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
