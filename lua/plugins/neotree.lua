@@ -32,6 +32,8 @@ return {
             ["on"] = "none",
             ["os"] = "none",
             ["ot"] = "none",
+            ["gk"] = "prev_git_modified",
+            ["gj"] = "next_git_modified",
           },
         },
       },
