@@ -82,6 +82,12 @@ return {
         map("n", "]d", function()
           vim.diagnostic.goto_next({ float = { border = "rounded" } })
         end, opts)
+        map("n", "<leader>kk", function()
+          vim.diagnostic.goto_prev({ float = { border = "rounded" } })
+        end, opts)
+        map("n", "<leader>jj", function()
+          vim.diagnostic.goto_next({ float = { border = "rounded" } })
+        end, opts)
         map("n", "<leader>lr", "<cmd> LspRestart <cr>")
       end
 
