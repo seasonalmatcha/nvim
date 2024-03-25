@@ -3,6 +3,7 @@ return {
   event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "nvim-neotest/nvim-nio",
     "antoinemadec/FixCursorHold.nvim",
     "marilari88/neotest-vitest",
   },
