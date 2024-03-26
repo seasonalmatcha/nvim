@@ -1,7 +1,6 @@
 local ensure_installed = {
   "lua-language-server",
   "dockerfile-language-server",
-  "eslintd",
   "gopls",
   "prettierd",
   "prisma-language-server",
@@ -13,6 +12,7 @@ local ensure_installed = {
   "rust-analyzer",
   "emmet-language-server",
   "stylua",
+  "tailwindcss-language-server",
 }
 
 return {
