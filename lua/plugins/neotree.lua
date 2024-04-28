@@ -14,7 +14,8 @@ return {
       close_if_last_window = false,
       popup_border_style = "rounded",
       window = {
-        width = 30,
+        position = "float",
+        -- width = 30,
       },
       filesystem = {
         window = {
