@@ -22,7 +22,7 @@ return {
 
           -- lua format
           require("luasnip.loaders.from_lua").load()
-          require("luasnip.loaders.from_lua").lazy_load({ paths = vim.g.lua_snippets_path or "" })
+          require("luasnip.loaders.from_lua").lazy_load({ paths = vim.fn.stdpath("config") .. "/lua/snippets" })
 
           aucmd("InsertLeave", {
             callback = function()
@@ -82,6 +82,10 @@ return {
           fields = { "abbr", "kind", "menu" },
         },
         mapping = {
+          ["<Up>"] = cmp.mapping.select_prev_item(),
+          ["<Down>"] = cmp.mapping.select_next_item(),
+          ["<C-k>"] = cmp.mapping.select_prev_item(),
+          ["<C-j>"] = cmp.mapping.select_next_item(),
           ["<C-p>"] = cmp.mapping.select_prev_item(),
           ["<C-n>"] = cmp.mapping.select_next_item(),
           ["<C-u>"] = cmp.mapping.scroll_docs(-4),
