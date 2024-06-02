@@ -68,5 +68,6 @@ return {
     map("n", "gl", function()
       builtin.lsp_definitions({ jump_type = "vsplit" })
     end)
+    map("n", ";t", "<cmd> TodoTelescope <cr>")
   end,
 }
