@@ -13,6 +13,7 @@ local ensure_installed = {
   "emmet-language-server",
   "stylua",
   "tailwindcss-language-server",
+  "templ",
 }
 
 return {
@@ -39,6 +40,7 @@ return {
         "tailwindcss",
         "emmet_language_server",
         "gopls",
+        "templ",
       }
 
       local on_attach = function(_, bufnr)
